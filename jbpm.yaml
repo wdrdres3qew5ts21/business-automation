@@ -1,0 +1,34 @@
+apiVersion: app.kiegroup.org/v2
+kind: KieApp
+metadata:
+  name: business-automation
+  namespace: business-automation
+spec:
+  commonConfig:
+    adminPassword: RfG6A6Yl
+    adminUser: adminUser
+    amqClusterPassword: SO7yAhP9
+    amqPassword: kiufh7UF
+    applicationName: business-automation
+    dbPassword: GKgr0lZO
+    keyStorePassword: KjSQ1L69
+  environment: rhpam-authoring
+  objects:
+    console:
+      jvm:
+        javaInitialMemRatio: 25
+        javaMaxMemRatio: 80
+      replicas: 1
+      resources:
+        limits:
+          cpu: '1'
+          memory: 4Gi
+        requests:
+          cpu: '1'
+          memory: 3Gi
+    dashbuilder:
+      config:
+        enableBusinessCentral: true
+        enableKieServer: true
+  upgrades: {}
+  version: 7.11.1
