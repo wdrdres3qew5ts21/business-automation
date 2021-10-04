@@ -21,8 +21,8 @@ spec:
       replicas: 1
       resources:
         limits:
-          cpu: '1.5'
-          memory: 8Gi
+          cpu: '1'
+          memory: 4Gi
         requests:
           cpu: '1'
           memory: 3Gi
@@ -30,6 +30,5 @@ spec:
       config:
         enableBusinessCentral: true
         enableKieServer: true
-  upgrades:
-    enabled: true
+  upgrades: {}
   version: 7.11.1
