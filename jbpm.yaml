@@ -22,7 +22,7 @@ spec:
       resources:
         limits:
           cpu: '1'
-          memory: 4Gi
+          memory: 6Gi
         requests:
           cpu: '1'
           memory: 3Gi
@@ -30,5 +30,7 @@ spec:
       config:
         enableBusinessCentral: true
         enableKieServer: true
-  upgrades: {}
+  upgrades: 
+    enabled: true
+    minor: true
   version: 7.11.1

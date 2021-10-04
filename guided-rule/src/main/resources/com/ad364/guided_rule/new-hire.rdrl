@@ -1,0 +1,14 @@
+package com.ad364.guided_rule;
+
+import java.lang.Number;
+
+rule "new-hire"
+	dialect "mvel"
+	when
+		employee : Employee( isNewhire == true )
+	then
+		SSOAccount fact0 = new SSOAccount();
+		fact0.setIsNew( true );
+		fact0.setId( employee.getFirstName().toLowerCase().substring(0.1).concat(employee.getLastName().toLowerCase()) );
+		insertLogical( fact0 );
+end
