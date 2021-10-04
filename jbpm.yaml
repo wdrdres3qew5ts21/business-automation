@@ -4,7 +4,7 @@ metadata:
   name: business-automation
   namespace: business-automation
 spec:
-  useImageTags: true
+  useImageTags: false
   commonConfig:
     adminPassword: RfG6A6Yl
     adminUser: adminUser
