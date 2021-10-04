@@ -3,8 +3,61 @@ apiVersion: v1
 metadata:
   name: kieconfigs-7.11.1
   namespace: business-automation
+  selfLink: /api/v1/namespaces/business-automation/configmaps/kieconfigs-7.11.1
+  uid: a57db01e-5432-4690-884a-ac16c18ffd73
+  resourceVersion: '943818'
+  creationTimestamp: '2021-09-29T11:21:21Z'
+  labels:
+    operators.coreos.com/businessautomation-operator.business-automation: ''
   annotations:
     app.kiegroup.org: 7.11.1
+  ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      kind: ClusterServiceVersion
+      name: businessautomation-operator.7.11.1-1
+      uid: 6e27dd3d-e80f-40e8-91c0-e6b259d68939
+      controller: false
+      blockOwnerDeletion: false
+  managedFields:
+    - manager: kie-cloud-operator
+      operation: Update
+      apiVersion: v1
+      time: '2021-09-29T11:21:21Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data': {}
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:app.kiegroup.org': {}
+          'f:ownerReferences':
+            .: {}
+            'k:{"uid":"6e27dd3d-e80f-40e8-91c0-e6b259d68939"}':
+              .: {}
+              'f:apiVersion': {}
+              'f:blockOwnerDeletion': {}
+              'f:controller': {}
+              'f:kind': {}
+              'f:name': {}
+              'f:uid': {}
+    - manager: olm
+      operation: Update
+      apiVersion: v1
+      time: '2021-09-29T11:21:22Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:labels':
+            .: {}
+            'f:operators.coreos.com/businessautomation-operator.business-automation': {}
+    - manager: Mozilla
+      operation: Update
+      apiVersion: v1
+      time: '2021-09-29T19:14:52Z'
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:data':
+          'f:common.yaml': {}
 data:
   common.yaml: |
     console:
